@@ -1,0 +1,56 @@
+|  -   admin 后台文件目录
+       |  -  index.php 后台主界面
+|  –  classes 公共类文件目录
+       |  – database.class.php 数据库处理类
+       |  – page.class.php 数据分页类
+       |  -  syscrypt.class.php 加密解密类
+       |  -  validate.class.php 数据合法性校验类
+       |  -  validatecode.class.php 验证码类
+|  -   coms smarty编译目录
+|  –  config  配置文件目录
+       |  – code.src.php 验证码生成文件
+       |  – config.inc.php 数据库配置文件
+       |  – enum.inc.php 应用类别配置文件
+       |  – init.inc.php smarty初始化文件
+       |  – simhei.ttf 验证码所用字体
+|  –  frame 前台框架目录
+       |  -  object.html 桌面背景设置页面
+       |  -  login.html  普通用户登录及注册页面
+       |  -  appmarket.php 应用仓库显示页面
+       |  -  userinfo 普通用户管理目录
+             |  -  index.php 用户修改密码页面
+|  –  libs  smarty主目录
+       |  -  ......
+       |  -  ......
+       |  -  ......
+|  –  public 公共文件目录
+       |  -  ajax
+             |  -  back_img.ajax.php 桌面背景修改-设置本地cookie
+             |  -  ico.ajax.php 添加应用设置本地cookie
+             |  -  username.ajax.php 注册时判断用户名是否重名
+             |  -  vcode.ajax.php 注册时判断验证码是否填写正确
+       |  -  css
+             |  -  admin.css 后台主界面样式
+             |  -  appmarket.css 应用市场界面样式
+             |  -  index.css 主界面样式
+             |  -  login.css 后台登陆界面样式
+       |  -  images
+             |  -  ......
+             |  -  ......
+             |  -  ......
+       |  -  js
+             |  -  ajax.js ajax请求处理脚本
+             |  -  appmarket.js 应用市场处理脚本
+             |  -  drag.js 拖拽处理脚本
+             |  -  index.js 主界面脚本
+             |  -  move.js 登录、注册等运动处理脚本
+             |  -  public.js 共用脚本函数
+             |  -  register.js 注册处理脚本
+|  -   tpls  模板目录
+       |  -  admin.tpl 后台管理主界面
+       |  -  appmarket.tpl 应用市场界面
+       |  -  index.tpl 主界面
+       |  -  login.tpl 后台登录界面
+       |  -  userinfo.tpl 用户密码修改界面
+|  -   index.php 主页面
+
