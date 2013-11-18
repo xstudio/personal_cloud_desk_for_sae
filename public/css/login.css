@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-color:#FBFBFB;
+	font-size:14px;
+	font-family:Arial, Helvetica, sans-serif;
+	padding:0;
+	margin:0;
+	width:100%;
+	height:100%;
+	color:#666;
+	text-align:center;
+}
+.container{
+	padding-top:80px;
+	width:345px;
+	margin:auto;
+}
+.container .error{
+	background-color: #FFEBE8;
+	border: #C00 1px solid;
+	margin: 0 0 16px 8px;
+	padding: 12px;
+	text-align:left;
+	font-size:13px;
+	color:#333;
+}
+.container .logo{
+	background:url(../images/admin_logo.png) center;
+	width:345px;
+	height:95px;
+}
+.container .error, .container .form, .reg .form{
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+.container .form, .reg .form{
+	margin-left: 8px;
+	padding: 10px 24px;
+	font-weight: normal;
+	background: white;
+	border: 1px solid #E5E5E5;
+	-moz-box-shadow: rgba(200,200,200,0.7) 0 4px 10px -1px;
+	-webkit-box-shadow: rgba(200,200,200,0.7) 0 4px 10px -1px;
+	box-shadow: rgba(200,200,200,0.7) 0 4px 10px -1px;
+}
+.container .form p{
+	text-align:left;
+}
+.container .form p.bottom{
+	padding-bottom:10px;
+}
+.container .form .txt, .reg .form .txt, .reg .form input.cod{
+	font-weight: bold;
+	color:#333;
+	font-size: 24px;
+	padding: 3px;
+	margin-top: 2px;
+	margin-right: 6px;
+	margin-bottom: 16px;
+	border: 1px solid #E5E5E5;
+	background: #FBFBFB;
+	width:280px;
+	-moz-box-shadow: inset 1px 1px 2px rgba(200,200,200,0.2);
+	-webkit-box-shadow: inset 1px 1px 2px rgba(200,200,200,0.2);
+	box-shadow: inset 1px 1px 2px rgba(200,200,200,0.2);
+}
+.container .alink{
+	padding-top:10px;
+	text-align:left;
+	text-indent:20px;
+}
+.container .alink a{
+	color:#21759B;
+}
+.container .alink a:hover{
+	color:#D54E21;
+}
+.container .form .sub{
+	cursor:pointer;
+	background:url(../images/button-grad.png) repeat-x;
+	color:#fff;
+	border:0;
+	text-shadow:0pt -1px 0pt rgb(51, 51, 51);
+	font-weight:bold;
+	padding:4px 15px;
+	border-radius:11px;
+	float:right;
+	margin-right:6px;
+}
+.container .form .sub:hover{
+	border:1px solid #333;
+	padding:3px 14px;
+}
+.container .form span{
+	text-indent:10px;
+	font-size:13px;
+}
+.container .form label.rem{
+	font-size:13px;
+	cursor:pointer;
+	padding:0;
+	margin:0;
+	float:left;
+}

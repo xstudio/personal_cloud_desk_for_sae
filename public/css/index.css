@@ -1,0 +1,144 @@
+@charset "utf-8";
+@import url(login.css);
+/* CSS Document */
+*{ font-size:13px; font-family:"微软雅黑";}
+body, ul{ margin:0; padding:0;}
+body{ width:100%; height:100%; overflow:hidden;}
+li{ list-style:none; float:left;}
+a{ text-decoration:none; color:#FFF;}
+img{ border:0;}
+iframe{ background:#FFF;}
+#content{ width:100%; height:100%; overflow:hidden;}
+/*-----分页列表------*/
+.pagelist{ position:absolute; top:10px; left:50%; z-index:3; width:210px; margin-left:-120px; height:40px; line-height:28px;}
+#ulpl{ float:left; text-align:center; }
+#ulpl li{ float:left; height:40px;}
+#ulpl li.listli{ background:url(../images/sprite_main_png.png) -140px -5px; width:140px; }
+#ulpl li a{ display:block; float:left; width:20px; height:20px;}
+#ulpl li a.p{background-image:url(../images/sprite_main_png.png);}
+#ulpl li a.p1{ background-position:-334px -132px;}
+#ulpl li a.p2{ background-position:-365px -132px;}
+#ulpl li a.p3{ background-position:-393px -132px;}
+#ulpl li a.p1:hover, #ulpl li.active a.p1{ background-position:-138px -130px;}
+#ulpl li a.p2:hover, #ulpl li.active a.p2{ background-position:-180px -130px;}
+#ulpl li a.p3:hover, #ulpl li.active a.p3{ background-position:-218px -130px;}
+#ulpl li.ico{ position:relative; top:-7px; margin-right:10px;}
+#ulpl li.ico img{ width:30px; height:30px;}
+#ulpl li.list, #ulpl li.active{ padding:3px 8px;}
+#ulpl li.active{background:url(../images/sprite_main_png.png) -350px -156px; height:20px;}
+#ulpl li.search{background:url(../images/sprite_main_png.png) -370px -5px; width:24px;}
+#ulpl li.search a{background:url(../images/sprite_main_png.png) -240px -157px; margin:2px 0 0 2px; }
+#ulpl li.search a:hover{ background-position:-320px -157px;}
+#ulpl li.navig{background:url(../images/sprite_main_png.png) -329px -5px; width:10px;}
+#ulpl li.end{background:url(../images/sprite_main_png.png) -397px -5px; width:10px;}
+/*------隐藏的搜索表单----*/
+#sform{ display:none; background:url(../images/sprite_main_png.png) no-repeat -140px -200px; height:33px; width:212px; position:absolute; top:45px; left:50%; margin-left:-150px; z-index:3;}
+#sform input.txt{ border:0; color:#FFF; height:20px; line-height:20px; margin:6px 0 0 7px; width:170px !important; background:none; float:left;}
+#sform input.sub{ border:0; width:27px !important; height:23px; margin:5px 5px 0 0; cursor:pointer; background:url(../images/sprite_main_png.png) -240px -157px; float:right;}
+/*------默认侧边栏----*/
+.toolbar{ position:absolute; left:0; top:50%; background:url(../images/dock_l.png); width:73px; height:297px; margin-top:-210px; z-index:3;}
+.toolbar ul{ margin-top:10px; position:relative;}
+.toolbar li{ margin:2px 4px;}
+.toolbar a{ width:52px; height:52px; padding:3px 3px 3px 3px; display:block;}
+.toolbar a:hover{ background:url(../images/appbutton_mouseover_bg4.png);}
+.toolbar img{ width:48px; height:48px;}
+.toolbar li.bt{ position:absolute; top:255px; left:0;}
+.toolbar li.bt a{ margin-left:3px; margin-right:2px; padding:0; display:block; float:left; width:23px; height:23px; overflow:hidden;}
+.toolbar li.bt a.object{ position:relative; top:-3px; background:url(../images/ico_start.png) -55px -22px;}
+.toolbar li.bt a.object:hover{ top:0; background-position:-55px -45px; }
+.toolbar li.bt a.logout:hover{ background-position:0 -75px; }
+.toolbar li.bt a.logout{ background:url(../images/ico_start.png) -37px -75px;}
+/*------主题背景------*/
+.page{ position:absolute; z-index:1; left:0; top:0; height:100%; width:100%; overflow:hidden;}
+#ulp{ height:100%; width:400%; position:absolute; left:0;}
+#ulp li.page1, #ulp li.page2, #ulp li.page3{ width:25%; height:100%; float:left; overflow:hidden; position:relative;}
+#ulp li ul{ margin-top:45px; margin-left:100px; width:86px; float:left;}
+#ulp li.listli{ clear:both; }
+#ulp li.listli div{ cursor:pointer; width:86px; height:88px; margin:10px 20px;}
+#ulp li.listli div:hover{background:url(../images/appbutton_mouseover_bg3.png) no-repeat;}
+#ulp li.listli img{ width:48px; height:48px; margin:6px 0 4px 0;}
+#ulp li.listli span{ background:rgba(0,0,0,.2); padding:2px 0; display:block; color:#FFF; 
+font-size:12px;-webkit-border-radius: 11px; border-radius: 11px; margin:0 2px;}
+#ulp li.page1{ background:url(../images/themes/wood1.jpg) center repeat;}
+#ulp li.page2{ background:url(../images/themes/paintingTime.jpg) center repeat;}
+#ulp li.page3{ background:url(../images/themes/valentinesDay.jpg) center repeat;}
+/*-------加载的框架------*/
+.dialog{ position:absolute; overflow:hidden; border:1px solid #999;
+-webkit-border-radius: 5px 5px 0 0; border-radius: 5px 5px 0 0; display:block; z-index:4;}
+.dialog1{ position:absolute; left:0; top:0; overflow:hidden; width:100%; height:100%;
+display:block; }
+.dialog_obj{ position:absolute; left:400px; top:80px; overflow:hidden; 
+display:block;-webkit-border-radius: 5px 5px 0 0; border-radius: 5px 5px 0 0; z-index:4;
+width:620px; height:386px; background:#FFF;}
+.dialog_obj iframe{ width:620px; height:360px; overflow:auto;}
+.dialog_ket{ position:absolute; left:400px; top:80px; overflow:hidden; 
+display:block;-webkit-border-radius: 5px 5px 0 0; border-radius: 5px 5px 0 0; z-index:4;
+width:600px; height:420px;}
+.dialog_pwd{ position:absolute; left:500px; top:80px; overflow:hidden; 
+display:block;-webkit-border-radius: 5px 5px 0 0; border-radius: 5px 5px 0 0; z-index:4;
+width:350px; height:180px; background:#FFF;}
+.dialog_pwd iframe{ margin:10px 0 0 25px;}
+.header{-webkit-border-radius: 5px 5px 0 0; border-radius: 5px 5px 0 0;
+ width:100%; height:25px; line-height:25px; cursor:move; float:left; background: url(../images/sprite_repeat_x_png.png) repeat 0 -31px;
+ border-bottom:1px #ccc solid; font-size:12px; color:#333;}
+.header1{ width:100%; height:25px; line-height:25px; float:left;
+background: url(../images/sprite_repeat_x_png.png) repeat 0 -31px;-webkit-border-radius: 3px 3px 0 0; 
+border-radius: 3px 3px 0 0;border-bottom:1px #ddd solid;}
+.header a, .header1 a{ float:right; display:block; width:21px; height:21px; cursor:pointer;
+ margin-left:5px;}
+.header a.min, .header1 a.min{ background:url(../images/sprite_main_png.png) -5px -55px;}
+.header a.mid, .header1 a.mid{ background:url(../images/sprite_main_png.png) -34px -55px;}
+.header a.max, .header1 a.max{ background:url(../images/sprite_main_png.png) -94px -55px;}
+.header a.close, .header1 a.close{ background:url(../images/sprite_main_png.png) -64px -55px;}
+.header a.min:hover, .header1 a.min:hover{ background-position:-5px -27px;}
+.header a.mid:hover, .header1 a.mid:hover{ background-position:-34px -26px;}
+.header a.max:hover, .header1 a.max:hover{ background-position:-94px -26px;}
+.header a.close:hover, .header1 a.close:hover{ background-position:-64px -26px;}
+.fr{ float:left; border:0; width:100%; height:100%;}
+/*------底部状态栏----*/
+.bottomBarBg { height: 130px; position: absolute; bottom: 0; width: 100%; 
+background:url(../images/bg_task_main.png) repeat-x; z-index:3;}
+.bottomBarBgTask { height: 64px; position: absolute; bottom: 0; width: 100%; 
+background: url(../images/bg_task_b.png) repeat-x 0 41px; z-index:4;}
+#btbar{ position:absolute; z-index:5; bottom:0; width:100%; height:64px; text-align:right;}
+#btbar a{ display:block; background:url(../images/bg_task_cur.png); float:right; width:112px;
+height:64px;margin-left:3px;}
+#btbar a:hover{ background:url(../images/bg_task_over.png);}
+#btbar img{ width:32px; height:32px; float:left; margin:20px 5px 10px 5px;}
+#btbar span{ color:#FFF; font-size:12px; float:left; margin-top:35px;}
+/*------登录表单------*/
+.bg{ background:rgba(0, 0, 0, .3); width:100%; height:100%; position:absolute; z-index:5;}
+.container{ opacity:0; filter:alpha(opacity=0); display:block; position:absolute; z-index:5; left:50%; margin-left:-410px; top:100px;}
+.container .tt{ background:#048FDF; width:337px; color:#FFF; height:40px; line-height:32px;
+-webkit-border-radius: 3px 3px 0 0; border-radius: 5px 5px 0 0; margin-left:8px; }
+.container .tt span{ font-size:14px;}
+.container a.r{ color:#369; margin-left:10px; font-size:12px;}
+.container .form{  position:relative; top:-7px; padding:0 24px;}
+.reg{opacity:0; filter:alpha(opacity=0);left:50%; margin-left:-510px;  display:none; background:#FFF; position:absolute; z-index:5; width:620px;
+margin-top:100px;-webkit-border-radius: 3px; border-radius: 3px; font-size:12px; background:none;}
+.reg .tt{ background:#048FDF; width:620px; padding:0; color:#FFF; height:40px; line-height:32px; -webkit-border-radius: 3px 3px 0 0; border-radius: 5px 5px 0 0;}
+.reg .tt span{ font-size:14px;}
+.reg .form{ margin:0; padding:20px; position:relative; top:-7px;}
+.reg .form input.cod{ width:80px;}
+.reg table{ width:100%; border-collapse:collapse;}
+.reg td.f{ width:60px; padding-right:20px; text-align:right;}
+.reg td.t{ text-align:left; width:300px;}
+.reg td.e{ text-align:left; color:#666;}
+.reg td.error{ text-align:left; color:red;}
+.reg span.ch a{ color:#369; position:relative; top:5px; margin-left:5px;}
+.reg span.ch a:hover, .reg label a:hover, .container a.r:hover{ text-decoration:underline;}
+.reg input.sub{cursor:pointer; background:url(../images/button-grad.png) repeat-x;
+color:#fff; border:0; text-shadow:0pt -1px 0pt rgb(51, 51, 51); font-weight:bold;
+padding:3px 30px; border-radius:11px; }
+input.err, input.errc{padding: 3px; margin-top: 2px; margin-right: 6px; margin-bottom: 16px;
+border: 1px solid red; background: #FBFBFB; width:280px; -moz-box-shadow: inset 1px 1px 2px rgba(200,200,200,0.2);
+-webkit-box-shadow: inset 1px 1px 2px rgba(200,200,200,0.2); box-shadow: inset 1px 1px 2px rgba(200,200,200,0.2);
+font-weight: bold; color:#333; font-size: 24px;}
+ input.errc{ width:80px;}
+.reg label a{ color:#369;}
+/*-----右键菜单---*/
+.window_menu{ font-size:12px;  padding:5px; -webkit-border-radius: 3px; border-radius: 3px; position:absolute; z-index:4; width:200px; background:#fff;}
+.window_menu a{ cursor:default; height:24px; line-height:24px; text-align:left; color:#454545; display:block; clear:both; padding:0 15px; border:1px solid #fff; -webkit-border-radius: 3px; border-radius: 3px;}
+.window_menu a:hover{ border-color:#ccc;}
+.bar_menu{font-size:12px;padding:2px; -webkit-border-radius: 5px; border-radius: 5px; position:absolute; z-index:5; width:100px;  background:#fff; border:1px solid #ccc;}
+.bar_menu a{ cursor:default; height:20px; line-height:20px; text-align:center; color:#454545; display:block; border:1px solid #fff; -webkit-border-radius: 3px; border-radius: 3px;}

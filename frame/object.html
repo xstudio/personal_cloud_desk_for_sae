@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>主题设置</title>
+<style type="text/css">
+body, ul{ padding:0; margin:0;}
+a{ text-decoration:none; }
+body{ font-size:13px; width:600px;}
+a.theme{ cursor:pointer; width:160px; height:140px; float:left; margin:20px; text-align:center;}
+a.theme img{ border:0; width:150px; height:110px; margin:5px;}
+a.theme span{color:#45649E;}
+a.theme:hover{ background-color:#CBE7FC;}
+a.theme, img{ -webkit-border-radius: 5px; border-radius: 5px;}
+</style>
+</head>
+
+<body>
+	<div id="themes">
+    	<a href="javascript:void(0)" class="theme">
+        	<img src="../public/images/themes/small/theme_metal.jpg" alt="metal.jpg" />
+            <span>metal</span>
+        </a>
+    	<a href="javascript:void(0)" class="theme">
+        	<img src="../public/images/themes/small/theme_wood1.jpg" alt="wood1.jpg" />
+            <span>wood1</span>
+        </a>  
+    	<a href="javascript:void(0)" class="theme">
+        	<img src="../public/images/themes/small/theme_paintingTime.jpg" alt="paintingTime.jpg" />
+            <span>paintingTime</span>
+        </a>    
+    	<a href="javascript:void(0)" class="theme">
+        	<img src="../public/images/themes/small/theme_valentinesDay.jpg" alt="valentinesDay.jpg" />
+            <span>valentinesDay</span>
+        </a>     
+    	<a href="javascript:void(0)" class="theme">
+        	<img src="../public/images/themes/small/theme_wood2.jpg" alt="wood2.jpg" />
+            <span>wood2</span>
+        </a>       
+    	<a href="javascript:void(0)" class="theme">
+        	<img src="../public/images/themes/small/theme_thatyears.jpg" alt="thatyears.jpg" />
+            <span>thatyears</span>
+        </a>         
+    	<a href="javascript:void(0)" class="theme">
+        	<img src="../public/images/themes/small/theme_starlovers.jpg" alt="starlovers.jpg" />
+            <span>starlovers</span>
+        </a>          
+    	<a href="javascript:void(0)" class="theme">
+        	<img src="../public/images/themes/small/theme_childmemory.jpg" alt="childmemory.jpg" />
+            <span>childmemory</span>
+        </a>          
+    	<a href="javascript:void(0)" class="theme">
+        	<img src="../public/images/themes/small/theme_wood3.jpg" alt="wood3.jpg" />
+            <span>wood3</span>
+        </a> 
+</div>
+    <script type="text/javascript" src="../public/js/ajax.js"></script>
+    <script type="text/javascript" src="../public/js/public.js"></script>
+    <script type="text/javascript">
+	//获取当前用户所在页
+	function getPage()
+	{
+		var aLi1=window.top.document.getElementById('listul').getElementsByTagName('li');
+		for(var i=1; i<aLi1.length; i++)
+		{
+			if(aLi1[i].className=='active')
+			{
+				return i;
+			}	
+		}
+	}
+	window.onload=function()
+	{
+		var aTheme=document.getElementById('themes').getElementsByTagName('a');
+		for(var i=0; i<aTheme.length; i++)
+		{
+			aTheme[i].onclick=function()
+			{
+				var oName=this.getElementsByTagName('img')[0].alt;
+				ajax({		//发送ajax请求
+					type:"GET",
+					url:"../public/ajax/back_img.ajax.php?img="+oName+"&page="+getPage(),
+					onSuccess:function(data){
+						var aLi=getByClass(window.top.document.getElementById('ulp'), 'page');
+						aLi[getPage()-1].style.backgroundImage='url(public/images/themes/'+oName+')';
+					},
+				});
+			}	
+		}
+	}
+	</script>
+</body>
+</html>

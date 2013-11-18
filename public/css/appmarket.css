@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+*{ font-size:13px; font-family:"微软雅黑";}
+body, ul{ margin:0; padding:0;}
+body{ background:#FFF;}
+a{ text-decoration:none;}
+li{ list-style:none;}
+img{ border:0;}
+.content{ width:590px; height:400px;}
+.search{ text-align:right; width:600px; background:#C6C9CE; height:30px; line-height:30px;}
+.search span{ margin-right:20px;}
+.search strong{ font-weight:normal; color:red;}
+.search form{ float:right; position:relative; margin-right:5px;}
+.search input{ border:0;}
+.search input.txt{ background:url(../images/market.png) 0 -25px; width:185px; padding:2px 0 2px 5px;
+height:17px;outline:none;}
+.search input.sub{ background:url(../images/market.png) -239px -22px; width:16px; height:16px;
+cursor:pointer; position:absolute; right:10px; top:9px;}
+.bar{ float:left; background: #EBEFF2; border-right: 1px solid #A6A6A6; width:78px; height:370px;}
+.bar ul{ margin:20px 0 10px 25px;}
+.bar a{ display:block; width:50px; background:url(../images/cat_bg.gif) no-repeat 0 -66px; color:#45659E; text-align:right; margin:0 -1px 5px 0;
+height:32px; line-height:32px; padding-right:2px;}
+.bar a:hover{ background-position:0 -33px;}
+.bar a.active{ font-weight:bold; color:#4565A0; background-position:0 0;}
+.fr{ float:right; height:370px;}
+.fr .info{ width:500px; margin:15px 0 0 10px; }
+.info table{width:100%; border-collapse:collapse; margin-top:10px;}
+.info table tr{ padding:5px 0 5px 5px; border-top:1px dotted #ccc;}
+.info table td.i{ width:80px; position:relative;}
+.info table td.i span.ri{ position:absolute; background:url(../images/market.png) -80px -57px
+no-repeat; width:21px; height:21px; left:28px; bottom:0;}
+.info table td.d{ width:300px;}
+.info table td.d span{ display:block; font-size:10px; margin-bottom:2px;}
+.info table td.d span.d{ color:#454545;}
+.info td{ padding:5px;}
+.info img{ width:30px; height:30px;}
+.info a.add{ background:url(../images/market.png) 0 0 no-repeat; display:block; width:60px;
+height:25px;}
+.info a.add:hover{ background-position:-67px 0;}
+.page{ padding-top:10px; width:500px; text-align:center; border-top:1px dotted #ccc; margin-left:10px;}
+.page a{ color:#333; margin:5px;}
+.page span{font-size:18px; color:#ccc; margin:5px; position:relative; top:1px;}

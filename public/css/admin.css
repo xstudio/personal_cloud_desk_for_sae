@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+*{ font-size:13px; font-family:"微软雅黑"; color:#333;}
+body{background-color:#FBFBFB; padding:50px 0; margin:0;}
+a{ text-decoration:none;}
+.content{ width:900px; height:500px; margin:auto; border:1px solid #DDD; padding:10px;}
+table{width:100%; border-collapse:collapse; margin-top:10px;}
+table tr,td,caption{ border:1px solid #ccc; padding:5px 0; text-align:center;}
+table caption{ border-bottom:0;}
+table caption{ background:#D4E6F7;}
+table td.n{width:180px;}
+table td.u{width:300px;}
+table td.t{width:150px;}
+table td.d{width:100px;}
+table input, select{border:1px solid #ccc;}
+table .txt{ width:90%; -webkit-border-radius: 3px;border-radius: 3px;  padding:2px;}
+table .sub{padding: 2px 30px; background: white; border-radius: 11px; cursor: pointer;}
+table .sub:hover{ border-color:#999;}
