@@ -1,4 +1,4 @@
-CREATE DATABASE `yun` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+--CREATE DATABASE `yun` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 CREATE TABLE `yun_icon`(
     `ico_id` mediumint unsigned AUTO_INCREMENT PRIMARY KEY COMMENT 'ID',
     `ico_name` varchar(20) NOT NULL COMMENT 'ICO名称',
