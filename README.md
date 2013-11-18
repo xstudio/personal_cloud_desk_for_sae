@@ -45,6 +45,10 @@
 ===========================
 v3.0 2013/11/18
 
+SAE版本托管github <a target="_blank" href="https://github.com/xstudio/personal_cloud_desk_for_sae">https://github.com/xstudio/personal_cloud_desk_for_sae</a>
+
+local版本托管github <a target="_blank" href="https://github.com/xstudio/personal_cloud_desk_for_local">https://github.com/xstudio/personal_cloud_desk_for_local</a>
+
 修改侧边栏主页链接为change log链接
 
 优化首次登陆显示的应用
